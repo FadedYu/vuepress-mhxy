@@ -3,6 +3,7 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { getDirname, path } from 'vuepress/utils'
+import { sidebar } from './sidebar'
 
 const __dirname = getDirname(import.meta.url)
 
@@ -54,16 +55,7 @@ export default defineUserConfig({
         link: '/guide/calculation/index'
       }
     ],
-    sidebar: [
-      {
-        text: '固伤计算',
-        children: ['/guide/calculation/index', '/guide/calculation/formula']
-      },
-      {
-        text: '常用查询',
-        children: ['/guide/document/monster/index']
-      }
-    ]
+    sidebar: sidebar
   }),
 
   plugins: [

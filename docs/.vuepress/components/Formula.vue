@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 const tableData = [
   {
     group: '技能',
@@ -146,11 +148,10 @@ const tableData = [
   }
 ]
 
-const cellStyle = ({ row, column, rowIndex, columnIndex }) => {
+const cellStyle = ({ columnIndex }) => {
   if (columnIndex === 0) {
     return {
-      background: '#88d9b4',
-      color: '#000000',
+      fontSize: '16px',
       fontWeight: 'bold'
     }
   }
@@ -164,10 +165,10 @@ const cellStyle = ({ row, column, rowIndex, columnIndex }) => {
     stripe
     :border="true"
     :size="'large'"
-    :header-cell-style="{ background: '#88d9b4', color: '#000000' }"
+    :header-row-style="{ fontSize: '16px' }"
     :cell-style="cellStyle"
   >
-    <el-table-column fixed prop="group" label="" width="120" />
+    <el-table-column fixed prop="group" label="" width="130" />
     <el-table-column prop="nrJ" label="女儿（技能）" width="200" />
     <el-table-column prop="nrA" label="女儿（暗器）" width="200" />
     <el-table-column prop="df" label="地府（白天）" width="200" />
@@ -178,7 +179,13 @@ const cellStyle = ({ row, column, rowIndex, columnIndex }) => {
 </template>
 
 <style lang="scss">
+html.dark .custom-table {
+  --el-table-header-bg-color: #5a3e3e;
+  --el-table-header-text-color: #ffffff;
+}
 .custom-table {
+  --el-table-header-bg-color: #88d9b4;
+  --el-table-header-text-color: #000000;
   table {
     overflow: unset;
     margin: 0;
