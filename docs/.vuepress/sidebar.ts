@@ -1,23 +1,14 @@
 import type { SidebarArrayOptions } from '@vuepress/theme-default'
 export const sidebar: SidebarArrayOptions = [
   {
-    text: '固伤计算',
-    children: [
-      {
-        text: '伤害计算',
-        link: '/guide/calculation/index'
-      },
-      {
-        text: '公式',
-        link: '/guide/calculation/formula'
-      }
-    ]
-  },
-  {
     text: '常用工具',
     children: [
       {
-        text: '配速计算工具',
+        text: '人物固伤计算',
+        link: '/guide/tools/gushang'
+      },
+      {
+        text: '人宠配速计算',
         link: '/guide/tools/speed'
       }
     ]
@@ -25,6 +16,10 @@ export const sidebar: SidebarArrayOptions = [
   {
     text: '常用查询',
     children: [
+      {
+        text: '人物固伤公式',
+        link: '/guide/document/formula'
+      },
       {
         text: '怪物血量',
         link: '/guide/document/monster'

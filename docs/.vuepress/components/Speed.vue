@@ -24,11 +24,7 @@ let zuoqi = ref(28)
 
 function onPersonAdd() {
   personSpeedCount.value++
-  handlePersonChange(
-    person[personProperty[personSpeedCount.value - 2]],
-    '',
-    personSpeedCount.value - 2
-  )
+  handlePersonChange(person[personProperty[personSpeedCount.value - 2]], '', personSpeedCount.value - 2)
 }
 
 function onPersonMinus() {
@@ -134,12 +130,7 @@ function spanDowngrade(value: number) {
     </el-button-group>
   </h2>
   <div class="flex-wrap">
-    <div
-      class="flex-align-center"
-      :key="count"
-      v-for="count in personSpeedCount"
-      style="margin: 0 20px 20px 0"
-    >
+    <div class="flex-align-center" :key="count" v-for="count in personSpeedCount" style="margin: 0 20px 20px 0">
       <span>{{ count }} 挡：</span>
       <el-input
         v-model="person[personProperty[count - 1]]"
@@ -150,9 +141,7 @@ function spanDowngrade(value: number) {
         @change="(value: number) => handlePersonChange(value, personProperty[count - 1], count -1)"
       >
         <template #append>
-          <el-button @click="handelPersonUpgrade(personProperty[count - 1], count - 1)">
-            逆推
-          </el-button>
+          <el-button @click="handelPersonUpgrade(personProperty[count - 1], count - 1)"> 逆推 </el-button>
         </template>
       </el-input>
     </div>
@@ -179,12 +168,7 @@ function spanDowngrade(value: number) {
   </div>
 
   <div class="flex-wrap">
-    <div
-      :key="count"
-      v-for="count in bbSpeedCount"
-      class="flex-column"
-      style="margin: 0 20px 20px 0"
-    >
+    <div :key="count" v-for="count in bbSpeedCount" class="flex-column" style="margin: 0 20px 20px 0">
       <div class="flex-align-center bb-input">
         <span>{{ count }} 挡：</span>
         <el-input
@@ -267,12 +251,12 @@ function spanDowngrade(value: number) {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   border-top: 0;
-  font-size: 12px;
-  color: #909399;
+  font-size: 14px;
+  color: var(--el-text-color-secondary);
 
   &-title {
     display: inline-flex;
-    width: 75px;
+    width: 85px;
   }
 }
 </style>

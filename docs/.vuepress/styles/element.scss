@@ -1,9 +1,0 @@
-// @forward 'element-plus/theme-chalk/src/common/var.scss' with (
-//   $table: (
-//     'header-text-color': '#000000',
-//     'header-bg-color': '#88d9b4'
-//   )
-// );
-
-@use 'element-plus/theme-chalk/src/index.scss' as *;
-@use 'element-plus/theme-chalk/dark/css-vars.css' as *;

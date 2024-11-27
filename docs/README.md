@@ -1,15 +1,11 @@
 ---
 home: true
-title: Home
-heroImage: https://vuejs.press/images/hero.png
+title: 首页
+heroImage: /images/hero.png
 actions:
-  - text: Get Started
-    link: /guide/calculation/index
+  - text: 人物固伤计算
+    link: /guide/tools/gushang
     type: primary
-
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
-    type: secondary
 
 features:
   - title: 一致性 Consistency

@@ -10,8 +10,9 @@ const __dirname = getDirname(import.meta.url)
 export default defineUserConfig({
   lang: 'zh-CN',
 
-  title: 'VuePress',
-  description: '这是我的第一个 VuePress 站点',
+  title: '梦幻129五开工具箱',
+  description: '梦幻西游129五开工具箱，内置固伤计算，配速计算，怪物血量查询等工具。',
+  head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
 
   theme: defaultTheme({
     locales: {
@@ -29,12 +30,7 @@ export default defineUserConfig({
         warning: '注意',
         danger: '警告',
         // 404 page
-        notFound: [
-          '这里什么都没有',
-          '我们怎么到这来了？',
-          '这是一个 404 页面',
-          '看起来我们进入了错误的链接'
-        ],
+        notFound: ['这里什么都没有', '我们怎么到这来了？', '这是一个 404 页面', '看起来我们进入了错误的链接'],
         backToHome: '返回首页',
         // a11y
         openInNewWindow: '在新窗口打开',
@@ -43,7 +39,7 @@ export default defineUserConfig({
       }
     },
 
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: '/images/logo.png',
 
     navbar: [
       {
@@ -52,7 +48,7 @@ export default defineUserConfig({
       },
       {
         text: '固伤计算',
-        link: '/guide/calculation/index'
+        link: '/guide/tools/gushang'
       }
     ],
     sidebar: sidebar
